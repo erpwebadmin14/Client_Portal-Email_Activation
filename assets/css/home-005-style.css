@@ -1,0 +1,400 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body{
+    background-image: url("../../public/img/Southwoods_Web_Image.webp");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50vw 100vh;
+
+    flex-direction: column;
+}
+
+body h6{
+    display: none;
+    border: 2px solid var(--black);
+    margin: 20px 20px 5px;
+    width: 50%;
+}
+
+header{
+    padding: 1.25rem;
+}
+
+.logo{
+    width: 25%;
+}
+
+.container{
+    min-height: 100%;
+    min-width: 100%;
+    overflow: auto;
+    display: flex;
+}
+
+.left{
+    flex: 50%;
+    margin: 0 auto;
+}
+
+.right{
+    flex: 50%;
+}
+
+/* LEFT */
+.header{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.header .check-logo{
+    display: block;
+    margin: 0 auto; 
+    width: 20%;
+}
+
+.header h2 {
+    position: relative;
+    width: 100%; /* Set to full width */
+    padding: 5px;
+    font-weight: 500;
+    margin: 5% auto 5px; /* Center the text horizontally */
+    font-size: 32px;
+    overflow: hidden; /* Hides any overflowing text */
+    letter-spacing: normal;
+}
+
+.header span{
+    color: var(--background_color);
+}
+
+.header p {
+    padding: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 10px auto; /* Center the text horizontally */
+}
+
+/* FOOTER */
+footer{
+    flex: 1;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    line-height: 10px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+footer p{
+    padding: 0 15px;
+    color: var(--text_color);
+}
+
+footer a{
+    padding: 0 15px;
+    color: var(--background_color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 389px){
+    body{
+        background: none;
+    }
+
+    body h6{
+        display: block;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .header{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header .check-logo{
+        width: 15%;
+        float: left;
+        margin: 10px 0 10px 0;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 5%;
+        line-height: 5px;
+        text-align: center;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    footer p{
+        line-height: 5px;
+    }
+}
+
+@media only screen and (min-width: 390px) and (max-width:500px){
+    body{
+        background: none;
+    }
+
+    body h6{
+        display: block;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .header{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header .check-logo{
+        float: left;
+        width: 15%;
+        margin: 10px 0 10px 0;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        font-weight: 700;
+        font-size: 36px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 5%;
+        line-height: 5px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    footer p{
+        line-height: 5px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 767px){
+    body{
+        background: none;
+    }
+
+    body h6{
+        display: block;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .header{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header .check-logo{
+        width: 15%;
+        float: left;
+        margin: 10px 0 10px 0;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        font-size: 36px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 5%;
+
+        line-height: 5px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+    .container{
+        display: flex;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .left{
+        flex: 1;
+        margin-left: 0;
+    }
+
+    .right{
+        flex: 1;
+    }
+
+    .logo{
+        width: 35%;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        font-size: 36px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    .header .check-logo{
+        margin-top: 5%;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 5%;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    footer p{
+        line-height: 2px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .header .check-logo{
+        margin-top: 10%;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+    }
+
+    footer a,
+    footer p{
+        font-size: 9px;
+    }
+
+    footer p{
+        line-height: 2px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .header .check-logo{
+        margin-top: 10%;
+    }
+
+    footer p{
+        line-height: 2px;
+    }
+    
+    footer a,
+    footer p{
+        font-size: 9px;
+    }
+}
+

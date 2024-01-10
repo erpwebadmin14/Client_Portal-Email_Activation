@@ -1,0 +1,562 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(10, 26, 68, 0.8), rgba(2, 48, 49, 0.8)), url("../../public/img/Eastwood_Web_Image.webp");
+    background-size: cover;
+
+    margin: auto;
+}
+
+body h6{
+    display: none;
+    border: 2px solid var(--white);
+    margin: 20px 20px 5px;
+    width: 50%;
+}
+
+header{
+    padding: 1.25rem;
+}
+
+.logo{
+    filter: brightness(0) invert(1);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+}
+
+.container-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-col{
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.right{
+    flex: 50%;
+    margin-right: 5%;
+}
+
+/* LEFT SCREEN / FORM */
+.header{
+    margin-top: 5%;
+    letter-spacing: 2px;
+}
+
+.header .subheader{
+    margin-top: 5%;
+}
+
+.header h2{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    letter-spacing: 5px;
+}
+
+.header p{
+    color: var(--white);
+    font-weight: 500;
+}
+
+.header span{
+    border: none;
+    color: var(--background_color);
+}
+
+.header_2{
+    top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.qr_code{
+    --size: 40px;
+    padding: 10px;
+    background:
+    linear-gradient(#00C4CC var(--size), transparent 0 calc(100% - var(--size)), #00C4CC 0) 0 0 / 4px 100%,
+    linear-gradient(#00C4CC var(--size), transparent 0 calc(100% - var(--size)), #00C4CC 0) 100% 0 / 4px 100%,
+    linear-gradient(to right, #00C4CC var(--size), transparent 0 calc(100% - var(--size)), #00C4CC 0) 0 0 / 100% 4px,
+    linear-gradient(to right, #00C4CC var(--size), transparent 0 calc(100% - var(--size)), #00C4CC 0) 0 100% / 100% 4px
+    ;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+}
+
+.header_2 .subheader,
+.header_2 .subheader_2{
+    display: flex;
+    flex-direction: column;
+    margin: 7% 3%;
+}
+
+.right .header_2{
+    display: none;
+}
+
+.header_2 p{
+    display: flex;
+    flex-direction: column;
+    line-height: 50%;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.header_2 .subheader p:nth-child(3),
+.header_2 .subheader_2 p:nth-child(3){
+    color: var(--background_color)
+}
+
+/* RIGHT SIDE / SCREEN DISPLAY */
+.phone{
+    position: relative;
+}
+
+.phone p{
+    display: none;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.phone span{
+    color: var(--background_color)
+}
+
+.glow{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(70% - 20px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+        0 0 60px 30px #fff,
+        0 0 140px 60px #0ff,
+        0 0 160px 90px #0ff;
+    z-index: -99999;
+}
+
+.screen{
+    position: absolute;
+    margin-left: auto;
+    right: 10%;
+    top: 6%;
+    border-radius: 25px;
+    width: 34.5%;
+    z-index: -1;
+}
+
+.case{
+    display: table;
+    margin: 0 5% 0 auto;
+    width: 45%;
+}
+
+.app_store{
+    position: absolute;
+    top: 50%;
+}
+
+.google_play{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 40%;
+    width: 35%;
+    margin-top: 15px;
+}
+
+.apple{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 40%;
+    width: 35%;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 5px;
+    font-weight: 600;
+}
+
+footer p{
+    color: var(--input_color);
+}
+
+footer a{
+    padding: 0 15px;
+    color: var(--background_color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body h6{
+        display: block;
+    }
+
+    .container-row{
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .container-col .header_2{
+        display:none;
+    }
+
+    .right{
+        margin: 0 auto;
+        min-height: 100%;
+    }
+
+    .right .header_2{
+        display: flex;
+        padding-left: 20%;
+    }
+
+    .header_2 .subheader_2 {
+        text-align: right;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        text-wrap: balance;
+        font-size: 38px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    .header_2 p{
+        font-size: 25px;
+    }
+
+    .phone{
+        right: 45%;
+    }
+
+    .phone p{
+        position: absolute;
+        text-wrap: nowrap;
+        display: block;
+        font-size: 25px;
+        left: 100%;
+        top: 15%;
+    }
+
+    .case,
+    .screen{
+        transform: rotate(-10deg);
+    }
+
+    .app_store{
+        width: 100%;
+        top: 20%;
+        left: 40%;
+    }
+
+    .google_play,
+    .apple{
+        margin-right: 0;
+    }
+
+    footer{
+        margin-top: 10%;
+        position: relative;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body h6{
+        display: block;
+    }
+
+    .container-row{
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .container-col .header_2{
+        display:none;
+    }
+
+    .right{
+        margin: 0 auto;
+        min-height: 100%;
+    }
+
+    .right .header_2{
+        display: flex;
+        padding-left: 20%;
+    }
+
+    .header_2 .subheader_2 {
+        text-align: right;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        text-wrap: balance;
+        font-size: 38px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    .header_2 p{
+        font-size: 25px;
+    }
+
+    .phone{
+        right: 45%;
+    }
+
+    .phone p{
+        position: absolute;
+        text-wrap: nowrap;
+        display: block;
+        font-size: 25px;
+        left: 100%;
+        top: 15%;
+    }
+
+    .case,
+    .screen{
+        transform: rotate(-10deg);
+    }
+
+    .app_store{
+        width: 100%;
+        top: 20%;
+        left: 40%;
+    }
+
+    .google_play,
+    .apple{
+        margin-right: 0;
+    }
+
+    footer{
+        margin-top: 10%;
+        position: relative;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header h2{
+        font-size: 46px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    .header_2 .subheader{
+        display: none;
+    }
+
+    .right{
+        margin: 0 auto;
+        min-height: 100%;
+    }
+
+    .right .header_2{
+        display: flex;
+        padding-left: 30%;
+    }
+
+    .right .header_2 p{
+        font-size: 30px;
+    }
+
+    .phone p{
+        font-size: 30px;
+    }
+
+    footer p,
+    footer a{
+        font-size: 9px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body h6{
+        display: none;
+    }
+
+    .logo{
+        width: 20rem;
+    }
+
+    .container-row{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cotainer-col{
+        flex: 50%;
+
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    .left{
+        justify-content: space-evenly;
+    }
+
+    .header h2{
+        font-size: 32px;
+    }
+
+    .header p{
+        font-size: 14px;
+    }
+
+    .header_2 p{
+        font-size: 22px;
+    }
+
+    .container-col .header_2{
+        display: flex;
+        margin-top: 10%;
+    }
+
+    .right .header_2{
+        display: none;
+    }
+
+    .header_2 .subheader{
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .header_2 .subheader_2{
+        display: none;
+    }
+    
+    .phone{
+        right: 0;
+    }
+
+    .case,
+    .screen{
+        margin: auto;
+    }
+
+    .screen{
+        position: absolute;
+        top: 6%;
+    
+        border-radius: 25px;
+        width: 34%;
+        z-index: -1;
+    }
+    
+    .case{
+        display: table;
+        margin: 0 5% 0 auto;
+        width: 45%;
+    }
+
+    .phone p{
+        display: none;
+    }
+
+    .case,
+    .screen{
+        transform: none;
+    }
+
+    .app_store{
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    
+    .google_play{
+        display: flex;
+        text-align: center;
+        margin-left: auto;
+        margin-right: 40%;
+    
+        width: 35%;
+        margin-top: 15px;
+    }
+    
+    .apple{
+        display: flex;
+        text-align: center;
+        margin-left: auto;
+        margin-right: 40%;
+    
+        width: 35%;
+        margin-top: 15px;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 2%;
+    }
+
+    footer a,
+    footer p{
+        font-weight: 600;
+        font-size: 9px;
+    }
+
+    footer p{
+        line-height: 5px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

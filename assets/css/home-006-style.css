@@ -1,0 +1,548 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(10, 26, 68, 0.8), rgba(2, 48, 49, 0.8)), url("../../public/img/Eastwood_Web_Image.webp");
+    background-size: cover;
+
+    margin: auto;
+}
+
+body h6{
+    display: none;
+    border: 2px solid var(--white);
+    margin: 20px 20px 5px;
+    width: 50%;
+}
+
+header{
+    padding: 1.25rem;
+}
+
+.logo{
+    filter: brightness(0) invert(1);
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.left{
+    flex: 50%;
+}
+
+.right{
+    flex: 50%;
+}
+
+section::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* LEFT SCREEN / FORM */
+.header{
+    letter-spacing: 2px;
+}
+
+.header .subheader{
+    margin-top: 5%;
+}
+
+.header .subheader a{
+    text-decoration: none;
+    color: var(--background_color);
+}
+
+.header h2{
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+.header p{
+    color: var(--white);
+    font-weight: 500;
+}
+
+.header span{
+    color: var(--background_color);
+}
+
+.header_2{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+}
+
+.header_2 .subheader{
+    flex: 50%;
+}
+
+.header_2 .button{
+    flex: 50%;
+    margin-top: 15%;
+}
+
+.header_2 p{
+    display: flex;
+    flex-direction: column;
+    line-height: 50%;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.header_2 .subheader p:nth-child(1){
+    color: var(--background_color);
+    font-weight: bold;
+}
+
+.header_2 .button button{
+    border-radius: 25px;
+    border: none;
+    background-color: var(--background_color);
+    color: var(--white);
+    font-weight: 600;
+    width: 200px;
+    padding: 5px;
+    text-wrap: nowrap;
+}
+
+/* RIGHT SIDE / SCREEN DISPLAY */
+.phone{
+    position: relative;
+    margin: 0 auto;
+}
+
+.glow{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+        0 0 60px 30px #fff,
+        0 0 140px 60px #0ff,
+        0 0 160px 90px #0ff;
+    z-index: -99999;
+}
+
+.screen{
+    position: absolute;
+    right: 32%;
+    top: 6%;
+
+    border-radius: 25px;
+    width: 36.5%;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+
+.case{
+    transform: rotate(10deg);
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 48%;
+}
+
+/* FOOTER */
+footer{
+    position: relative;
+    left: 0;
+    right: 0;
+
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    line-height: 5px;
+    font-weight: 600;
+}
+
+footer p{
+    color: var(--input_color);
+    line-height: 2px;
+}
+
+footer a{
+    padding: 0 15px;
+    color: var(--background_color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 425px) {
+    body h6{
+        display: block;
+    }
+    
+    .container{
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .left{
+        margin: auto 2%;
+    }
+
+    .right{
+        margin: auto 15%;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .left{
+        margin: auto 1.5rem;
+    }
+
+    .header h2{
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .header p{
+        font-size: 12px;
+    }
+
+    .header_2 p{
+        font-size: 12px;
+    }
+
+    .header_2 .button button{
+        font-size: 12px;
+        width: 120px;
+    }
+
+    .header_2 button{
+        margin: auto 0.75rem;
+    }
+
+    .phone{
+        padding: 11rem 0;
+    }
+
+    .screen{
+        right: 0;
+        top: 1.5rem;
+        width: 8.75rem;
+        border-radius: 15px;
+    }
+
+    .case{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 7.25rem;
+        width: 11.75rem;
+    }
+    
+    .glow{
+        left: calc(78% - 20px);
+    }
+
+    footer{
+        margin-top: 5%;
+    }
+
+    footer a,
+    footer p{
+        font-size: 9px;
+        font-weight: 500;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+    body h6{
+        display: block;
+    }
+    
+    .container{
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .left{
+        margin: auto 2%;
+    }
+
+    .right{
+        margin: auto 15%;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        font-weight: 500; 
+        font-size: 36px;
+        text-wrap: balance;
+    }
+
+    .header p{
+        font-size: 17px;
+    }
+
+    .header_2 p{
+        font-size: 17px;
+    }
+
+    .subheader a{
+        font-weight: bold;
+    }
+
+    .header_2 .button{
+        margin: auto 0 auto 5%;
+    }
+
+    .header_2 .button button{
+        width: 100%;
+    }
+
+    .header_2 .subheader p:nth-child(1){
+        font-weight: bold;
+    }
+
+    .phone{
+        padding: 11rem 0;
+    }
+
+    .screen{
+        right: 0;
+        top: 1.5rem;
+        width: 8.75rem;
+        border-radius: 15px;
+    }
+
+    .case{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 12.5rem;
+        width: 11.75rem;
+    }
+    
+    .glow{
+        left: calc(78% - 20px);
+    }
+
+    footer{
+        margin-top: 5%;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body h6{
+        display: block;
+    }
+    
+    .container{
+        flex-direction: column;
+        min-width: 100%;
+    }
+
+    .left{
+        margin: auto 2.5rem;
+    }
+
+    .right{
+        margin: auto 15%;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .header h2{
+        letter-spacing: normal;
+        font-weight: 500; 
+        font-size: 32px;
+        text-wrap: balance;
+    }
+
+    .header p{
+        font-size: 14px;
+    }
+
+    .header_2 p{
+        font-size: 14px;
+    }
+
+    .subheader a{
+        font-weight: bold;
+    }
+
+    .header_2 .button{
+        margin: auto 5rem;
+    }
+
+    .header_2 .button button{
+        width: 180px;
+    }
+
+    .header_2 .subheader p:nth-child(1){
+        font-weight: bold;
+    }
+
+    .phone{
+        padding: 13rem 0;
+    }
+
+    .screen{
+        right: 0;
+        top: 2rem;
+        width: 11.25rem;
+        border-radius: 15px;
+    }
+
+    .case{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 19.25rem;
+        width: 15rem;
+    }
+    
+    .glow{
+        left: calc(78% - 20px);
+    }
+
+    footer{
+        margin-top: 5%;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body h6{
+        display: none;
+    }
+    
+    .container{
+        margin: auto;
+        flex-direction: row;
+    }
+
+    .left{
+        margin: 3% 2%;
+    }
+
+    .right{
+        margin: auto 15%;
+    }
+
+    .logo{
+        width: 20%;
+    }
+
+    .header,
+    .header_2{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .header h2{
+        text-wrap: initial;
+        font-size: 41px;
+    }
+
+    .header p{
+        font-size: 18px;
+    }
+
+    .header_2 p{
+        font-size: 18px;
+    }
+
+    .header .subheader{
+        margin: 10% auto;
+    }
+
+    .header_2 .button button{
+        font-size: 16px;
+        width: 120px;
+    }
+
+    .screen{
+        margin-left: 2rem;
+        top: 0;
+        left: 0;
+        width: 14rem;
+        border-radius: 20px;
+        margin-top: 2rem;
+    }
+
+    .case{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 18rem;
+    }
+    
+    .glow{
+        width: 120px;
+        height: 120px;
+        left: calc(45% - 20px);
+    }
+
+    footer{
+        position: absolute;
+        bottom: 2%;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    .header_2 .button{
+        flex: 50%;
+        margin-top: 10%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}

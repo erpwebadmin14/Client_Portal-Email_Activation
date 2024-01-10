@@ -1,0 +1,356 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(1, 122, 126, 0.8), rgba(2, 48, 49, 0.8)), url("../../public/img/Uptown\ Bonifacio\ 3.jpeg");
+    background-size: cover;
+}
+
+header{
+    padding: 1.25rem;
+}
+
+.logo{
+    filter: brightness(0) invert(1);
+}
+
+.container{
+    display: flex;
+}
+
+.left{
+    flex: 50%;
+}
+
+.right{
+    flex: 50%;
+}
+
+.form-header h1{
+    color: var(--text_color);
+    font-size: 32px;
+    font-weight: 600;
+    text-shadow: -2px 2px lightgray;
+}
+
+.inputs{
+    width: 70%;
+}
+
+.inputs input{
+    opacity: 80%;
+}
+
+#row1 label{
+    color: var(--input_color);
+    font-weight: 700;
+}
+
+#inputEmail4{
+    border-radius: 50px;
+    background-color: var(--input_color);
+    
+    font-size: 12px;
+    font-weight: 700;
+}
+
+form .btn{
+    float: left;
+    margin-top: 5%;
+
+    width: 40%;
+    padding: 5px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--background_color);
+    border-radius: 50px;
+}
+
+/* RIGHT SIDE / SCREEN DISPLAY */
+.phone{
+    position: relative;
+}
+
+.glow{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(70% - 20px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+        0 0 60px 30px #fff,
+        0 0 140px 60px #0ff,
+        0 0 160px 90px #0ff;
+    z-index: -99999;
+}
+
+.screen{
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    right: 6%;
+    top: 6%;
+
+    border-radius: 25px;
+    width: 34.3%;
+    z-index: -1;
+}
+
+.case{
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    width: 45%;
+}
+
+.app_store{
+    position: absolute;
+    top: 50%;
+}
+
+.google_play{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 35%;
+
+    width: 35%;
+    margin-top: 15px;
+}
+
+.apple{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 35%;
+
+    width: 35%;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer{
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    line-height: 5px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+footer p{
+    color: var(--input_color);
+}
+
+footer a{
+    padding: 0 15px;
+    color: var(--background_color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        margin: 5% auto;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    .header{
+        text-align: center;
+        letter-spacing: normal;
+        font-size: 41px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    #inputEmail4{
+        font-size: 16px;
+    }
+
+    .inputs{
+        margin: 10% auto;
+        width: 100%;
+    }
+
+    form .btn{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 10% auto 0 auto;
+        font-size: 20px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        margin: 5% auto;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    .header{
+        text-align: center;
+        letter-spacing: normal;
+        font-size: 41px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    #inputEmail4{
+        font-size: 16px;
+    }
+
+    .inputs{
+        margin: 10% auto;
+        width: 100%;
+    }
+
+    form .btn{
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 10% auto 0 auto;
+        font-size: 20px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .logo{
+        width: 20rem;
+    }
+
+    .container{
+        min-width: 100%;
+        flex-direction: row;
+    }
+
+    .left{
+        margin: 5%;
+    }
+
+    .right{
+        display: flex;
+    }
+
+    form{
+        left: 0;
+    }
+
+    .header{
+        float: left;
+        font-size: 30px;
+    }
+
+    .inputs{
+        float: left;
+        width: 70%;
+    }
+
+    label{
+        font-size: 16px;
+    }
+
+    #inputEmail4{
+        font-size: 12px;
+    }
+
+    form .btn{
+        width: 20%;
+        margin: 5% auto 0 auto;
+        left: auto;
+        right: auto;
+        font-size: 12px;
+    }
+
+    .glow{
+        left: calc(45% - 20px);
+    }
+
+    .case,
+    .screen{
+        margin: auto;
+    }
+
+    .screen{
+        top: 5%;
+        left: 5%;
+    }
+
+    .google_play,
+    .apple{
+        float: left;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 2%;
+    }
+
+    footer a,
+    footer p{
+        font-size: 9px;
+    }
+
+    footer p{
+        line-height: 5px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

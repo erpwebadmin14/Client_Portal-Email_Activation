@@ -1,0 +1,521 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(1, 122, 126, 0.8), rgba(2, 48, 49, 0.8)), url("../../public/img/Uptown Bonifacio 3.jpeg");
+}
+
+header{
+    padding: 1.25rem;
+}
+
+.logo{
+    filter: brightness(0) invert(1);
+}
+
+.container{
+    display: flex;
+}
+
+.left{
+    flex: 50%;
+    padding: 0.5rem 1.75rem;
+}
+
+.right{
+    flex: 50%;
+}
+
+section::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* LEFT SCREEN / FORM */
+form{
+    margin: auto;
+    line-height: 5px;
+}
+
+.header{
+    color: var(--text_color);
+    text-shadow: -2px 2px lightgray;
+}
+
+.subheader{
+    color: var(--text_color);
+    font-weight: 600;
+}
+
+.inputs{
+    width: 60%;
+}
+
+.inputs input{
+    padding: 4px;
+    opacity: 0.5;
+}
+
+#row1{
+    padding-top: 15px;
+}
+
+#row2{
+    padding-top: 30px;
+}
+
+.form-check{
+    padding: 8px 0;
+}
+
+#inputFirstName,
+#inputSurname,
+#inputBirthdate,
+#inputMobile,
+#inputEmail4,
+#inputPassword,
+#inputConfirmPassword {
+    border-radius: 50px;
+    background-color: var(--input_color);
+}
+
+#row2 label{
+    color: var(--input_color);
+}
+
+.form-check p{
+    text-wrap: pretty;
+    color: var(--input_color);
+    line-height: normal;
+}
+
+
+
+form .btn{
+    top: 50%;
+    
+    display: table;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto; 
+
+    width: 50%;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--background_color);
+    border-radius: 50px;
+}
+
+form a{
+    text-decoration: none;
+}
+
+/* RIGHT SIDE / SCREEN DISPLAY */
+.phone{
+    position: relative;
+}
+
+.glow{
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(65% - 20px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 
+        0 0 60px 30px #fff,
+        0 0 140px 60px #0ff,
+        0 0 160px 90px #0ff;
+    z-index: -99999;
+}
+
+.screen{
+    position: absolute;
+    right: 6.8%;
+    border-radius: 35px;
+    width: 12.35rem;
+    z-index: -1;
+}
+
+.case{
+    display: table;
+    width: 16rem;
+}
+
+.app_store{
+    position: absolute;
+    top: 50%;
+}
+
+.google_play{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 55%;
+
+    width: 12rem;
+    margin-top: 15px;
+}
+
+.apple{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 55%;
+
+    width: 12rem;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+footer{
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    line-height: 5px;
+}
+
+footer p{
+    color: var(--input_color);
+}
+
+footer a{
+    color: var(--background_color);
+    text-decoration: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    form{
+        left: 0;
+        right: 0;
+    }
+
+    .header,
+    .subheader{
+        text-align: center;
+    }
+
+    .header{
+        font-size: 36px;
+    }
+
+    .subheader{
+        font-size: 15px;
+    }
+
+    .inputs{
+        margin: 0 auto;
+        line-height: 5px;
+    }
+
+    #inputFirstName,
+    #inputSurname,
+    #inputBirthdate,
+    #inputMobile,
+    #inputEmail4,
+    #inputPassword,
+    #inputConfirmPassword{
+        font-size: 16px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    form button{
+        font-size: 16px;
+    }
+
+    footer{
+        margin-top: 10%;
+        position: relative;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    footer p{
+        line-height: 5px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        min-width: 100%;
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    form{
+        left: 0;
+        right: 0;
+    }
+
+    .header,
+    .subheader{
+        text-align: center;
+    }
+
+    .header{
+        font-size: 36px;
+    }
+
+    .subheader{
+        font-size: 15px;
+    }
+
+    .inputs{
+        margin: 0 auto;
+        line-height: 5px;
+    }
+
+    #inputFirstName,
+    #inputSurname,
+    #inputBirthdate,
+    #inputMobile,
+    #inputEmail4,
+    #inputPassword,
+    #inputConfirmPassword{
+        font-size: 16px;
+    }
+
+    form button{
+        font-size: 16px;
+    }
+
+    footer{
+        margin-top: 10%;
+        position: relative;
+    }
+
+    footer a,
+    footer p{
+        font-size: 12px;
+    }
+
+    footer p{
+        line-height: 5px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        background-size: intial;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .logo{
+        width: 20rem;
+    }
+
+    .left{
+        margin: 1rem 2rem;
+    }
+
+    .header{
+        font-size: 32px;
+        line-height: 2.5rem; /* 40px */
+    }
+
+    .subheader{
+        font-size: 12px;
+        line-height: 1.25rem; /* 20px */   
+    }
+
+    .header,
+    .subheader{
+        text-align: left;
+    }
+
+    .inputs{
+        width: 75%;
+        margin: 0;
+    }
+
+    #inputFirstName,
+    #inputSurname,
+    #inputBirthdate,
+    #inputMobile,
+    #inputEmail4,
+    #inputPassword,
+    #inputConfirmPassword{
+        font-size: 12px;
+    }
+
+    #row2{
+        margin-top: 15px;
+    }
+
+    #row2 label{
+        margin-top: 10px;
+    }
+
+    label{
+        font-size: 13px;
+    }
+
+    .form-check p{
+        font-size: 12px;
+    }
+
+    .screen{
+        right: 11.75%;
+        border-radius: 25px;
+        width: 75%;
+        top: 7%;
+    }
+
+    .container{
+        flex-direction: row;
+    }
+
+    .right{
+        display: flex;
+        margin: auto;
+    }
+
+    .header{
+        text-wrap: nowrap;
+    }
+
+    .phone{
+        margin: 0 auto;
+    }
+
+    .glow{
+        box-shadow: 
+            0 0 60px 30px #fff,
+            0 0 160px 120px #0ff,
+            0 0 180px 140px #0ff;
+        left: calc(48% - 20px);
+    }
+
+    .app_store{
+        top: 45%;
+        right: 32%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .header{
+        font-size: 51px;
+    }
+
+    .subheader{
+        font-size: 22px;  
+        padding-top: 10px;
+    }
+
+    .inputs{
+        width: 60%;
+    }
+
+    #inputFirstName,
+    #inputSurname,
+    #inputBirthdate,
+    #inputMobile,
+    #inputEmail4,
+    #inputPassword,
+    #inputConfirmPassword{
+        font-size: 16px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    .form-check p{
+        font-size: 16px;
+    }
+    
+    .case,
+    .screen{
+        margin: auto;
+    }
+
+    .screen{
+        width: 15.75rem;
+        left: 2.5rem;
+        top: 2.75rem;
+    }
+
+    .case{
+        width: 21rem;
+    }
+
+    .google_play,
+    .apple{
+        width: 25%;
+    }
+
+    .app_store{
+        top: 50%;
+        left: 45%;
+        right: auto;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 2%;
+    }
+
+    footer p,
+    footer a{
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    footer p{
+        line-height: 5px;
+    }
+}

@@ -1,0 +1,442 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --text_color: #0A1A44;
+    --background_color: #00C4CC;
+    --input_color: #D8E6ED;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body{
+    background-image: url("../../public/img/Uptown\ Bonifacio\ 2.jpeg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50vw 100vh;
+}
+
+header{
+    padding: 1.25rem;
+}
+
+.logo{
+    width: 25%;
+} 
+
+.container{
+    display: flex; 
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns items horizontally */
+    justify-content: center; /* Center-aligns items vertically */
+
+    margin-left: -3%;
+}
+
+/* OTP */
+.header{
+    text-align: center;
+}
+
+.header .otp-logo{
+    display: block;
+    margin: 0 auto; 
+}
+
+.header h2 {
+    width: 100%; /* Set to full width */
+    padding: 5px;
+    font-weight: 700;
+    margin: 0 auto 5px; /* Center the text horizontally */
+    font-size: 27px;
+    white-space: nowrap; /* Keeps the text in one line */
+    overflow: hidden; /* Hides any overflowing text */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows */
+}
+
+.header p {
+    padding: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 10px auto; /* Center the text horizontally */
+}
+
+#inputs {
+    justify-content: center; /* Center-aligns the input fields horizontally */
+    align-items: center; /* Aligns the input fields vertically */
+    margin-bottom: 20px; /* Adds some spacing between inputs and buttons */
+}
+
+.input { 
+    width: 60px; 
+    border: none; 
+    border-radius: 5px;
+    color: var(--black);
+    border: 3px rgba(0, 196, 204, 0.2) ; 
+    background-color: rgba(0, 196, 204, 0.2);
+    margin: auto;
+    text-align: center; 
+    font-size: 36px; 
+    cursor: not-allowed; 
+    pointer-events: none;
+} 
+  
+.input:focus { 
+    border: 3px solid var(--background_color); 
+    outline: none; 
+} 
+  
+.input:nth-child(1) { 
+    cursor: pointer; 
+    pointer-events: all; 
+}
+
+form .btn {
+    width: 50%;
+    padding: 5px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--background_color);
+    border-radius: 50px;
+    margin: 10px auto; /* Add this line to center the button */
+    display: block; /* Ensures the margin works properly */
+    
+    font-size: 14px;
+}
+
+form .btn:hover{
+    background-color: var(--background_color);
+    border: 1px solid var(--black);
+}
+
+.container .resend_btn{
+    text-align: center;
+    width: 50%;
+    color: #808080;
+    font-weight: 700;
+    border-radius: 50px;
+    margin: 0 30%; /* Add this line to center the button */
+    display: block; /* Ensures the margin works properly */
+
+    font-size: 14px;
+}
+
+.container a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+footer{
+    display: none;
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+
+    display: table;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto; 
+    
+    line-height: 5px;
+    font-size: 12px;
+}
+
+footer p{
+    color: var(--text_color);
+}
+
+footer a{
+    padding: 0 15px;
+    color: var(--background_color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* Extra small devices (Phones): Up to 576px */
+@media only screen and (max-width: 389px){
+    body{
+        background: none;
+    }
+    
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .logo{
+        width: 60%;
+    }
+
+    .otp-logo{
+        width: 50%;
+    }
+
+    .header h2{
+        font-size: 41px;
+    }
+
+    .header p{
+        font-size: 17px;
+    }
+    
+    .container .btn,
+    .resend_btn{
+        font-size: 22px;
+    }
+
+    .input{
+        width: 50px;
+        height: 50px;
+    }
+
+    form .btn:active,
+    form .btn:focus{
+        color: var(--background_color);
+    }
+
+    footer{
+        position: relative;
+        margin-top: 10%;
+        font-size: 12px;
+        display: block;
+    }
+}
+
+/* Small Devices (Tablets): 576px to 768px */
+@media only screen and (min-width: 390px) and (max-width:500px){
+    body{
+        background: none;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .input{
+        width: 50px;
+        margin: 5px;
+        height: 50px
+    }
+
+    .header h2{
+        font-size: 41px;
+    }
+
+    .header p{
+        font-size: 17px;
+    }
+
+    .container .btn,
+    .resend_btn{
+        font-size: 22px;
+    }
+
+    .input{
+        margin: auto;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 10%;
+        display: block;
+        bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 767px){
+    body{
+        background: none;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .otp-logo{
+        width: 50%;
+    }
+
+    .header h2{
+        font-size: 41px;
+    }
+
+    .header p{
+        font-size: 17px;
+    }
+
+    .input{
+        width: 60px;
+        height: 60px;
+    }
+
+    .container .btn {
+        width: 40%;
+    }
+
+    .container .btn,
+    .resend_btn{
+        font-size: 22px;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 10%;
+        bottom: 0;
+    }
+    
+}
+
+/* Medium Devices (Laptops): 768px to 992px */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    body{
+        background: none;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+    .container{
+        flex-direction: column;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .left{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+
+    .otp-logo{
+        width: 60%;
+    }
+
+    .header h2{
+        font-size: 51px;
+    }
+
+    .header p{
+        font-size: 22px;
+    }
+
+    .input{
+        width: 80px;
+        height: 80px;
+    }
+
+    .container .btn{
+        width: 60%;
+    }
+
+    .container .btn,
+    .resend_btn{
+        font-size: 22px;
+    }
+
+    footer{
+        position: relative;
+        margin-top: 10%;
+        font-size: 15px;
+    }
+}
+
+/* Large Devices (Desktops): 992px to 1200px */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    body{
+        background-size: 50vw 100vh;
+    }
+
+    .container{
+        min-width: 100%;
+        display: flex;
+    }
+    
+    .left{
+        flex: 50%;
+        margin: 0 auto;
+    }
+
+    .right{
+        flex: 50%;
+    }
+
+    .header{
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    footer{
+        display: none;
+    }
+}
+
+/* Extra large Devices (TV): 1200px and above */
+@media only screen and (min-width: 1200px){
+    .container{
+        min-width: 100%;
+    }
+
+    .left{
+        margin: 0 auto;
+        flex: 50%;
+    }
+
+    .right{
+        flex: 50%;
+    }
+
+    footer{
+        display: none;
+    }  
+}
